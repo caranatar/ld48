@@ -1,0 +1,32 @@
+:: Start
+The planet is [dying]<dying|.
+(click: ?dying)[(t8n: "dissolve")[(display: "StartTwo")]]
+
+:: StartTwo
+We've known for years, but did nothing until it was too late. Now, it all comes down to this: the launch of a handful of Seed Ships, carrying the last remnants of our society. Our scientists determined the ideal number of occupants for each Seed Ship to be 98. Each ship holds [99]<num|.
+(click: ?num)[(t8n: "dissolve")[(display: "StartThree")]]
+
+:: StartThree
+All 99 occupants will be placed into hypersleep for the journey, but each ship will need occassional guidance as it hurls into the depths of the void. Due to the unknown effects of repeated hypersleep cycles over the millenia of travel, each ship requires a [Navigator]<nav|.
+(click: ?nav)[(t8n: "dissolve")[(display: "StartFour")]]
+
+:: StartFour
+You have been chosen as Navigator for your ship. You alone will be in charge of making the decisions that may either save or doom our people.
+(set: $madness to 0)(set: $jumps to -1)
+Good luck...
+
+[[In Orbit]]
+
+:: In Orbit
+You are in orbit after a successful launch. Around you glimmer the other Seed Ships, each containing a small fragment of hope for your people. One by one, they lurch into the void, as you know you must too.
+
+You check the dashboard in front of you and see that all systems are nominal. Your precious cargo is safe for now at least.
+
+(display: "RandomStorylet")
+
+:: We ventured where we should not
+When you wake, the space around you is wrong. Alarms are ringing, you think, but it's hard to hear over the sounds of rending metal splitting your ears. Soon, there are no more sounds at all. All hope is lost.
+
+:: RandomStorylet
+(set: $jumps to $jumps + 1)(if: (open-storylets:)'s length is 0)[(link-goto: "We ventured where we should not")](else:)[(set: _storylet to (either: ...(open-storylets:))'s name )(link-goto: _storylet)]
+Jumps: $jumps

@@ -1,0 +1,5 @@
+:: Silence
+(storylet: when $madness < 100)
+There is nothing. You sit in silence for a while and watch the unchanging scenery before returning to hypersleep. (set: $madness to $madness + 5)
+
+(display: "RandomStorylet")
