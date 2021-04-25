@@ -27,6 +27,8 @@ You check the dashboard in front of you and see that all systems are nominal. Yo
 :: We ventured where we should not
 When you wake, the space around you is wrong. Alarms are ringing, you think, but it's hard to hear over the sounds of rending metal splitting your ears. Soon, there are no more sounds at all. All hope is lost.
 
+(click: "Restart")[(restart:)]
+
 :: RandomStorylet
 (if: (open-storylets:)'s length is 0)[(link-goto: "We ventured where we should not")](else:)[(set: _storylet to (either: ...(open-storylets:))'s name )(link-goto: _storylet)]
 

@@ -31,6 +31,8 @@ For the next several weeks, the ship makes minor adjustments in preparation for 
 
 Lithobraking complete, you pull up the console. $population survivors. They may not be the last of your society but they will be the only ones you'll ever know. You awaken them from hypersleep then open a hatch, setting the first foot of your people onto their new home.
 
+(click: "Restart")[(restart:)]
+
 :: paradise_lost
 The probe confirms your suspicions. The surface is teeming not with life but with death. Evil spirits roam the land, befouling its beauty and sucking its life. You stare at the probe monitor aghast as you watch a group of them torture your family, your friends, laughing until they suddenly stop to look up at the sky. Up at...?
 
@@ -41,3 +43,5 @@ You disengage the locks on the console, enable every override. You can't let the
 The ship lurches violently as it crashes into the atmosphere, compacting it in front of the ship with heat and fury, vaporizing everything in front of it. As the alarms blare around you, you feel at peace, knowing you saved the $population souls left in your care.
 
 Outside, as the ship violently bores deeper and deeper into the surface, the atmosphere is now aflame. In a matter of minutes all life is extinguished from the peaceful planet. What could have been paradise is now nothing but death and ash.
+
+(click: "Restart")[(restart:)]
