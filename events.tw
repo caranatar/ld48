@@ -1,5 +1,30 @@
 :: Silence
 (storylet: when $madness < 100)
-There is nothing. You sit in silence for a while and watch the unchanging scenery before returning to hypersleep. (set: $madness to $madness + 5)
+You awake to nothing. (set: _inc to (random: 1, 10))(set: $madness to $madness + _inc)
+(if: $madness > 50)[You have come to detest the silence. You stew in anger at being awoken for nothing until you return to hypersleep.(set: $madness to $madness + 5)](else:)[You sit in silence for a while and watch the unchanging scenery before returning to hypersleep.]
 
-(display: "RandomStorylet")
+(random-storylet:)
+
+:: An asteroid field
+(storylet: when $jumps > 4 and $investigating is not true)
+(set: $showFooter to false)You awake to a collision alarm sounding from the computer. It seems that an asteroid field wasn't detected until it was too late. Now you have to decide if you want to try to avoid it or try to fly through it.
+
+[[Fly through it]]
+[[Try to avoid it]]
+
+:: Fly through it
+(set: $showFooter to true)(set: _chance to (random: 1, 100))(if: _chance > 40)[You manage to navigate through without losing the ship, but not without taking some damage. (set: $health to $health - 10)](else:)[You manage to fly through it unscathed.]
+
+(random-storylet:)
+
+:: Try to avoid it
+(set: $showFooter to true)(set: _chance to (random: 1, 100))(if: _chance > 30)[You jam the thrusters and change course as quickly as you can, but some damage is still done. (set: $health to $health - 5)](else:)[You jam the thrusters, change course quickly, and manage to avoid damaging the ship.]
+
+(random-storylet:)
+
+:: A signal
+(storylet: when $jumps > 3 and $investigating is not true)
+You awake to the pulsing sound of a signal intercepted by the ship computer. You lack the tools necessary to decode it, but it could mean salvation. It could also be nothing, the regular pulsing of a distant star or the last gasps of some other dying civilization.
+
+(set: $investigating to true)(random-storylet: "Investigate")(set: $investigating to false)
+(random-storylet: "Ignore it")

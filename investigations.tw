@@ -1,0 +1,43 @@
+:: A beacon in the dark
+(storylet: when $investigating is true and $jumps <= 5)
+Your investigation leads to a probe, sent by your people long before you were born. If memory serves, it contains records of your people, their anatomy, the chemical makeup of your planet, and more. Despite having no one to share the discovery with, it makes you feel a little less alone until you return to your sleep.(set: $madness to $madness - 3)
+
+(random-storylet:)
+
+:: A dead planet
+(storylet: when $investigating is true)
+You find a dead planet. There is evidence of a long lost civilization that once flourished here, but the planet is now uninhabitable. You wonder if somewhere out there its inhabitants have managed to complete the task you now face.
+
+(madness-decision: "dead_planet_determined", "dead_planet_madness")
+
+(random-storylet: "Resume course")
+
+:: dead_planet_determined
+Despite the grim situation, you steel your nerves and decide to continue on immediately.(set: $madness to $madness - 3)
+
+:: dead_planet_madness
+The sight sends you deeper into despair and it takes everything you have to continue on.(set: $madness to $madness + 3)
+
+:: Paradise
+(storylet: when $investigating is true)
+As the ship follows the signal, you are awoken by the computer. You have stumbled upon a planet whose composition closely matches your own. It likely contains suitable resources for continuing life. You dare to hope as you send down a probe to investigate the surface.
+
+(madness-decision: "paradise_found", "paradise_lost")
+
+:: paradise_found
+The probe confirms your suspicions. You've found your people's new home. You survey a suitable landing spot and instruct the computer to begin the descent.
+
+For the next several weeks, the ship makes minor adjustments in preparation for entry into the atmosphere. But it feels like no time at all until the ship is streaking across the sky of your new home like a blazing star. Until it cuts a scar through the prairies, in flame and plough, pushing its protective plating to its limits.
+
+Lithobraking complete, you pull up the console. $population survivors. They may not be the last of your society but they will be the only ones you'll ever know. You awaken them from hypersleep then open a hatch, setting the first foot of your people onto their new home.
+
+:: paradise_lost
+The probe confirms your suspicions. The surface is teeming not with life but with death. Evil spirits roam the land, befouling its beauty and sucking its life. You stare at the probe monitor aghast as you watch a group of them torture your family, your friends, laughing until they suddenly stop to look up at the sky. Up at...?
+
+The ship! They are coming towards to capture the ship!
+
+You disengage the locks on the console, enable every override. You can't let them take the ship!
+
+The ship lurches violently as it crashes into the atmosphere, compacting it in front of the ship with heat and fury, vaporizing everything in front of it. As the alarms blare around you, you feel at peace, knowing you saved the $population souls left in your care.
+
+Outside, as the ship violently bores deeper and deeper into the surface, the atmosphere is now aflame. In a matter of minutes all life is extinguished from the peaceful planet. What could have been paradise is now nothing but death and ash.
